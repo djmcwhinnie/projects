@@ -1,0 +1,236 @@
+:root {
+    --brand-orange: #f17036;
+    --brand-purple: #781c5c;
+    --brand-charcoal: #36454f;
+    --brand-black: #333333;
+    --brand-grey: #767676;
+
+    --x-small: 0.5em;
+    --small: 1em;
+    --medium: 2em;
+    --large: 3em;
+    --x-large: 4em;
+
+    --primary-font: "Lato", sans-serif;
+    --secondary-font: "Lora", serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    min-width: 320px;
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+a {
+    color: var(--brand-orange);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--brand-purple);
+    text-decoration: none;
+}
+
+a:active,
+a:focus {
+    color: var(--brand-purple);
+}
+
+.highlight {
+    font-family: var(--primary-font);
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    margin-top: 0;
+}
+
+header {
+    width: 60vw;
+    min-width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: var(--medium) 0;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        justify-content: flex-start;
+    }
+}
+
+.header__social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .header__social-icons {
+        margin-left: auto;
+    }
+}
+
+.header__social-icons__icon {
+    list-style: none;
+    font-size: 2.6rem;
+}
+
+.header__social-icons li + li {
+    margin-left: 0.5em;
+}
+
+.header__social-icons__icon a {
+    color: var(--brand-grey);
+}
+
+.header__social-icons__icon a:hover,
+.header__social-icons__icon a:active {
+    color: var(--brand-orange);
+}
+
+.header__social-icons__icon a:focus {
+    color: var(--brand-purple);
+}
+
+main {
+    width: 60vw;
+    min-width: 320px;
+    padding: var(--medium) 0;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: var(--medium);
+}
+
+@media only screen and (min-width: 768px) {
+    section {
+        margin-bottom: var(--x-large);
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* ===  Project Card Styles === */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    padding: var(--small);
+    border: 3px solid var(--brand-charcoal);
+    box-shadow: 0px 6px 8px 0px #b4bab5;
+}
+
+.project-card h2 {
+    font-size: 2rem;
+    text-transform: none;
+    color: var(--brand-orange);
+    margin: 0 0 var(--x-small);
+}
+
+.project-card p {
+    margin: 0;
+}
+
+.project-card__device-icon {
+    margin-top: auto;
+    padding: var(--x-small) 0;
+    font-size: 2rem;
+    text-align: right;
+}
+
+.project-card a {
+    font-weight: 400;
+    border: 1px solid var(--brand-orange);
+    text-align: center;
+    padding: var(--x-small);
+}
+
+.project-card a:hover,
+.project-card a:focus {
+    color: #fff;
+    background-color: var(--brand-orange);
+}
+
+.project-card a:active {
+    background-color: var(--brand-purple);
+    border-color: var(--brand-purple);
+    color: #fff;
+}
+
+/* === Footer Styles === */
+footer {
+    width: 60vw;
+    min-width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    align-items: center;
+    padding: var(--x-small) 0;
+    border-top: 3px solid var(--brand-orange);
+    margin: 0 auto;
+}
+
+.footer__social-icons {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer__social-icons {
+        justify-content: flex-end;
+    }
+}
+
+.footer__social-icons li + li {
+    margin-left: 0.5em;
+}
+
+.footer__social-icons__icon {
+    list-style: none;
+    font-size: 2rem;
+}
+
+.footer__social-icons__icon a {
+    color: var(--brand-grey);
+}
+
+.footer__social-icons__icon a:hover,
+.footer__social-icons__icon a:active {
+    color: var(--brand-orange);
+}
+
+.footer__social-icons__icon a:focus {
+    color: var(--brand-purple);
+}

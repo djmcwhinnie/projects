@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <title>Weather App | dmcwhinnie</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/5229f38a0a.js" crossorigin="anonymous"></script>
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/weather-app.css">
+</head>
+
+<body>
+  <div id="background-img" class="weather-img" style="background-image: linear-gradient(to right top, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.3)), url('https://source.unsplash.com/1600x900/?thunder');">
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">Weather App</h1>
+        <div class="header__title-divider"></div>
+        <p class="header__sub-title">dmcw<span>hi</span>nnie</p>
+      </header>
+      <main>
+        <h2 id="weather">Hello!</h2>
+        <p id="description"></p>
+        <img id="weather-icon" class="hide" src="http://openweathermap.org/img/wn/11n@4x.png" alt="weather icon">
+        <h3 id="name" class="hide"></h3>
+        <p id="temp" class="hide">Temprature: <span id="tempValue"></span>&#8451;</p>
+        <p id="status" class="hide"></p>
+      </main>
+
+      <footer>
+        <label for="location">Search for a UK city or town.</label>
+        <input id="location" name="location" type="text">
+        <button id="search-user" class="location__search"><i class="fas fa-search-location"></i></button>
+        <button id="find-user" class="location__arrow"><i class="fas fa-location-arrow"></i></button>
+        <p>&copy; Douglas McWhinnie <span id="footer-date"></span> | Uses <a href="https://openweathermap.org/api">OpenWeather</a> and <a href="https://source.unsplash.com/">Unsplash Source</a> API's.</p>
+      </footer>
+    </div>
+  </div>
+  <!-- Custom Scripts -->
+  <script src="scripts/weather-app.js"></script>
+</body>
+
+</html>
