@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <title>Scotle - Wordle Game Variant</title>
+    <script src="https://kit.fontawesome.com/5229f38a0a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/scotle-app--styles.css">
+</head>
+<body>
+    <header class="title-container">
+        <div class="colour-mode">
+            <i class="far fa-lightbulb"></i>
+            <label class="switch">
+                <input id="colour-mode" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <i class="fas fa-lightbulb"></i>
+        </div>
+        <h1>Scotle</h1>
+        <button id="game-info">
+            <i class="fas fa-info-circle"></i>
+        </button>
+    </header>
+    <div id="info-modal" aria-labelledby="modal_label" aria-modal="true" class="modal hidden">
+        <div class="modal__inner">
+            <button id="modal-close"><i class="far fa-times-circle"></i></button>
+            <h2 id="modal_label">Game Info</h2>
+            <p>Welcome to another Wordle clone.</p>
+            <p>Based on the original game, with a twist to use only Scottish words and provide a meaning or description at the game's conclusion.</p>
+            <h3>Resources + Inspiration</h3>
+            <p>The game was built following a tutorial by <a href="https://twitter.com/ania_kubow" target="_blank">Ania Kubow</a> over on her YouTube channel, which you can find <a href="https://www.youtube.com/c/AniaKub%C3%B3w" target="_blank">here</a>.</p>
+            <p>The main intention was simply to practice JavaScript via the tutorial while building something I was interested in - between the game being on trend at the time, a variety of variations of the game popping up, and the idea to make a version of the game only using Scots words.</p>
+            <p>Once the main game was coded, I went about altering the code to change elements or add in some extra ideas, like the toggle for a light and dark mode. These small changes continued to stoke the intention of this side project as a means to practise and develop skills.</p>
+            <h3>Future Development</h3>
+            <p>With the core game built, I hope to continue improving and refining the site as an on going playground, with an idea to implement the following:</p>
+            <ul>
+                <li>More Scots words.</li>
+                <li>Score Tracking (Wins v Losses).</li>
+                <li>Preventing possible random word duplication.</li>
+                <li>Refactoring responsive layout for keys and letter grids.</li>
+            </ul>
+            <h3>Original Game</h3>
+            <p>You can find the original version that started it all, <a href="#">here</a> on the NewYork Times site, and there is a great SyntaxFM podcast with the original creator that is worth a listen <a href="https://syntax.fm/show/430/creator-of-wordle-josh-wardle">here</a>.</p>
+        </div>
+    </div>
+    <main class="game-container">
+        <div class="message-container hidden">
+
+        </div>
+        <div class="tile-container">
+
+        </div>
+        <div class="key-container">
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <a href="https://dmcwhinnie.co.uk">Douglas McWhinnie</a> <span id="footer-date"></span></p>
+    </footer>
+    <script src="scripts/scotle-app.js"></script>
+</body>
+</html>

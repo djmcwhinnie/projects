@@ -212,7 +212,7 @@ footer .location__search,
 footer .location__arrow {
     width: 20%;
     background-color: transparent;
-    color: var(--brand-black);
+    color: white;
     font-size: 1.8rem;
     padding: 0;
     border: 3px solid white;
@@ -237,14 +237,8 @@ footer .location__search:hover,
 footer .location__arrow:hover,
 footer .location__search:focus,
 footer .location__arrow:focus {
-    background-color: white;
-}
-
-footer .location__search:hover i,
-footer .location__arrow:hover i,
-footer .location__search:focus i,
-footer .location__arrow:focus i {
     color: var(--brand-black);
+    background-color: white;
 }
 
 footer p {

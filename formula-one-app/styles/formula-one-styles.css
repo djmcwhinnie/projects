@@ -1,0 +1,689 @@
+:root {
+    --brand-orange: #f17036;
+    --brand-purple: #781c5c;
+    --app-red: #e10600;
+    --app-red--light: #ff5532;
+    --app-red--dark: #a60000;
+    --app-black: #15151e;
+    --app-white: #FAF9F6;
+    --app-dark-grey: #38383f;
+    --bronze: #CD7F32;
+    --silver: #C0C0C0;
+    --gold: #FFD700;
+
+    --primary-font: "Titillium Web", sans-serif;
+    --brand-font: "Work Sans", sans-serif;
+
+    --small: 0.5em;
+    --medium: 1em;
+    --large: 2.5em;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    color: var(--app-black);
+}
+
+.svgSprite {
+    display: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2em;
+    }
+}
+
+.header__title {
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+    color: var(--app-black);
+}
+
+.header__title span {
+    color: var(--app-red);
+}
+
+@media only screen and (min-width: 768px) {
+    .header__title {
+        font-size: 3.6rem;
+    }
+}
+
+.header__title-divider {
+    display: inline-block;
+    height: 30px;
+    width: 1px;
+    background-color: var(--app-black);
+    margin: 0 var(--small);
+}
+
+.header__brand-title {
+    font-family: var(--brand-font);
+    font-weight: 200;
+    font-size: 2rem;
+    margin: 0;
+    color: var(--app-black);
+}
+
+@media only screen and (min-width: 768px) {
+    .header__brand-title {
+        font-size: 3.6rem;
+    }
+}
+
+.header__brand-title span {
+    color: var(--brand-orange);
+    font-weight: 300;
+}
+
+.header-info {
+    margin-left: auto;
+    font-size: 2.1rem;
+}
+
+.header-info a {
+    color: var(--app-dark-grey);
+    vertical-align: middle;
+}
+
+.header-info a.back-link {
+    font-size: 1.6rem;
+}
+
+.header-info a.back-link span {
+    margin-left: 0.3em;
+}
+
+.header-info a + a {
+    margin-left: var(--small);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+
+.current-race {
+    padding: 0 var(--medium);
+    margin-bottom: 2rem;
+    color: var(--app-black);
+}
+
+/* Current Race */
+.current-race__container {
+    background-color: var(--app-dark-grey);
+    color: var(--app-white);
+    padding: var(--medium) 0;
+    border-radius: 1em;
+}
+
+.current-race__container p {
+    font-weight: 200;
+    color: var(--app-white);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.current-race__container span.current-race__name {
+    font-weight: 600;
+}
+
+#countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto 1em;
+    width: 85%;
+}
+
+.countdown__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown__section .days,
+.countdown__section .hours,
+.countdown__section .minutes,
+.countdown__section .seconds {
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.countdown__section__title {
+    font-family: var(--primary-font);
+    font-size: 1em;
+}
+
+#raceDay p {
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+}
+
+.current-race__name {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* || Sprint Qualifying */
+.sprint-race__sub-title {
+    display: block;
+    font-weight: 400;
+    text-align: center;
+}
+
+h2.sprint-race__title {
+    font-size: 3.6rem;
+    color: var(--app-red);
+    text-align: center;
+    margin: 0;
+}
+
+.sprint-race__name {
+    display: block;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: var(--medium);
+}
+
+.sprint-race__results img {
+    display: block;
+    height: 64px;
+    margin: 0 auto 1em;
+}
+
+.sprint-race__results table {
+    width: 90%;
+    margin: 0 auto 2em;
+    text-align: center;
+}
+
+.sprint-race__results table th {
+    color: var(--app-red--dark);
+}
+
+/* || Last Race */
+.last-race {
+    color: var(--app-black);
+    margin-bottom: 2em;
+}
+
+.last-race__name {
+    display: block;
+    font-weight: 400;
+    text-align: center;
+}
+
+h2.last-race__title {
+    font-size: 3.6rem;
+    color: var(--app-red);
+    text-align: center;
+    margin: 0;
+}
+
+.last-race__round {
+    display: block;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: var(--medium);
+}
+
+.last-race__podiums {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.last-race__podiums__second,
+.last-race__podiums__first,
+.last-race__podiums__third {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 15%;
+}
+
+.driver-number {
+    color: var(--app-dark-grey);
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    background-color: var(--app-black);
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.podium--second {
+    height: 68px;
+}
+
+.podium--first {
+    height: 88px;
+}
+
+.podium--third {
+    height: 48px;
+}
+
+.podium .icon {
+    width: 38px;
+    height: 38px;
+    fill: var(--app-white);
+}
+
+.podium--second .icon {
+    fill: var(--silver);
+}
+
+.podium--first .icon{
+    fill: var(--gold);
+}
+
+.podium--third .icon{
+    fill: var(--bronze);
+}
+
+.driver-name {
+    font-size: 2.1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+/* || Race Stats */
+.last-race__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.last-race__stats h3 {
+    color: var(--app-red--dark);
+    margin-top: 0;
+}
+
+.fastest-lap {
+    text-align: center;
+}
+
+.fastest-lap img {
+    display: block;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.fastest-lap__time {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+}
+
+.fastest-lap__driver {
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin: 0 0 0.3em;
+}
+
+.fastest-lap__team {
+    color: var(--app-dark-grey);
+    font-weight: 600;
+    margin: 0;
+}
+
+.fastest-lap__lap {
+    margin: 0;
+}
+
+.fastest-pitstop {
+    text-align: center;
+}
+
+.fastest-pitstop img {
+    display: block;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.fastest-pitstop__time {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+}
+
+.fastest-pitstop__team {
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin: 0 0 0.3em;
+}
+
+.fastest-pitstop__driver {
+    color: var(--app-dark-grey);
+    font-weight: 600;
+    margin: 0;
+}
+
+.fastest-pitstop__lap {
+    margin: 0;
+}
+
+.grid-climb {
+    grid-column-start: span 2;
+    padding: 0 1em;
+}
+
+.grid-climb h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.grid-climb__places {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-climb__places + .grid-climb__places:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--app-red--light);
+    margin: 1em 0;
+}
+
+.grid-climb__places img {
+    height: 50px;
+}
+
+.grid-climb__places__number {
+    font-size: 5.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--app-dark-grey);
+}
+
+.grid-climb__places__team {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+}
+
+.grid-climb__places__positions {
+    margin: 0;
+}
+
+.pos-start,
+.pos-finish {
+    font-weight: 600;
+}
+
+.race-summary {
+    grid-column-start: span 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.race-summary h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.race-summary img {
+    height: 50px;
+}
+
+.race-summary table {
+    width: 60%;
+    text-align: center;
+}
+
+/* || Championship Standings */
+.champ-standings__year {
+    display: block;
+    font-weight: 400;
+    text-align: center;
+}
+
+h2.champ-standings__title {
+    font-size: 3.6rem;
+    color: var(--app-red);
+    text-align: center;
+    margin: 0;
+}
+
+.champ-standings__driver,
+.champ-standings__constructor {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--small);
+}
+
+.champ-standings__driver h3,
+.champ-standings__constructor h3 {
+    color: var(--app-dark-grey);
+    text-align: center;
+}
+
+.champ-standings__driver table,
+.champ-standings__constructor table {
+    text-align: center;
+}
+
+.champ-standings__driver th,
+.champ-standings__constructor th {
+    color: var(--app-red--dark);
+    font-weight: 600;
+}
+
+/* || Race Schedule */
+.race-schedule {
+ padding: var(--medium);
+}
+
+.race-schedule h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--app-red);
+    margin-top: 0;
+}
+
+.race-schedule h2 span {
+    font-size: 1.6rem;
+    font-weight: 200;
+    color: var(--app-black);
+}
+
+.round {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    border: 1px solid var(--app-dark-grey);
+    margin-bottom: 2em;
+}
+
+.round__meta {
+    margin: 0;
+    font-weight: 200;
+}
+
+.round__meta span {
+    font-weight: 400;
+}
+
+.round__meta.date {
+    margin-left: auto;
+}
+
+.round__meta.date svg {
+    margin-right: 0.5em;
+}
+
+.round__meta.sprint::before {
+    content: '|';
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+.round__name {
+    width: 100%;
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--app-dark-grey);
+    text-align: center;
+    margin: 0.5em 0;
+    line-height: 1;
+}
+
+.round__track {
+    margin: 0 auto;
+}
+
+.round__track img {
+    display: block;
+    height: 50px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.round__track p {
+    margin: 0;
+}
+
+/* || Information Page */
+.info-page main {
+    padding: var(--medium);
+}
+
+.info-page p {
+    font-weight: 200;
+    line-height: initial;
+}
+
+.info-page p a {
+    color: var(--app-black);
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.info-page p a:hover,
+.info-page p a:focus-within {
+    color: var(--app-red--dark);
+}
+
+.info-page p a:focus {
+    outline: 1px solid var(--app-red--dark);
+    outline-offset: 3px;
+}
+
+.info-page h2 {
+    color: var(--app-red);
+    margin-top: 0;
+}
+
+.info-page h3 {
+    color: var(--app-red--dark);
+    margin-top: 0;
+}
+
+.info-page ul li {
+    margin-bottom: var(--small);
+}
+
+.info-page ul li:last-of-type {
+    margin-bottom: 0;
+}
+
+.info-page ul li a {
+    color: var(--app-dark-grey);
+    text-decoration: none;
+}
+
+.info-page ul li a:hover {
+    color: var(--app-red--dark);
+    text-decoration: underline;
+}
+
+.info-page ul li a:focus {
+    outline: 1px solid var(--app-red--dark);
+    outline-offset: 3px;
+    color: var(--app-red--dark);
+    text-decoration: underline;
+}
+
+
+/* || Footer */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--app-white);
+    background-color: var(--app-black);
+    padding: 1em 0;
+    border-top: 6px solid var(--app-red);
+    font-family: var(--brand-font);
+}
+
+@media only screen and (min-width: 768px) {
+    footer {
+        padding: 2em;
+    }
+}
+
+footer p {
+    width: 100%;
+    background-color: var(--app-black);
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+footer p a {
+    color: var(--app-white) !important;
+    text-decoration: underline;
+}
