@@ -2,7 +2,7 @@
 let checkMobile = window.matchMedia('screen and (max-width: 767px)');
 let checkTablet = window.matchMedia('screen and (min-width: 768px) and (max-width: 1199px)');
 let checkDesktop = window.matchMedia('screen and (min-width: 1200px)');
-let appID = '52536f62cb752f559a79504de8341409';
+let appID = '[insert-key-here]';
 
 // Weather Quotes
 var quotes = [
